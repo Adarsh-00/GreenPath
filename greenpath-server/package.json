@@ -1,0 +1,16 @@
+{
+  "name": "green-path",
+  "version": "1.0.0",
+  "description": "reduce carbon emission and pollution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.1.0"
+  }
+}
