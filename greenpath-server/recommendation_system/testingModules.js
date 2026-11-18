@@ -450,8 +450,6 @@ const savingAssumptions = {
     }
 };
 
-// iterDomainModel(envDomainModel);
-//need loop
 const rankedCandidates = [];
 for (let domain in userState.behaviours) {
 
