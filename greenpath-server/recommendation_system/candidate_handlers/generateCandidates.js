@@ -38,6 +38,6 @@ export function generateCandidate(userState, envDomainModel) {
 }
 
 /***************NOTE*******************/
-//just copy pasted from testingModules.js, removed .behaviour from envmodel at line 29 that's it
-//commented rankCandidates function so that we can test raw candidate generation
+//under working conditions
+//commented rankCandidates function so we can test each functions separtly and keep clean modules
 //needed checking, updation and testing.

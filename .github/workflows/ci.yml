@@ -6,13 +6,29 @@ on:
   pull_request:
     branches: [master]
 
+  workflow_dispatch:
+
 jobs:
-  basic-checks:
+  candidate-generation-test:
     runs-on: ubuntu-latest
 
     steps:
+    # get the repository source code
       - name: checkout repository
         uses: actions/checkout@v4
-      
-      - name: Confirm workflow runs
-        run: echo "GreenPath CI is running"
+    
+    # prepare node.js
+      - name: Setup Node.js
+        run: actions/setup-node@v4"
+        with: 
+          node-version: 22
+    
+    # install backend dependencies
+      - name: Install backend dependencies
+        working-directory: ./greenpath-server
+        run: npm ci
+
+    # Execute candidate generation test
+      - name: Test candidate generation
+        working-directory: ./greenpath-server
+        run: npm test

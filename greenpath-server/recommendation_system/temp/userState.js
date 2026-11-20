@@ -1,21 +1,23 @@
 const userState = {
     userId: "#firstuser01",
-
+//USER MAY NOT KNOW IF THE SOURCE HE USING IS HIGH OR LOW OR MODERATE LEVEL IN TERMS OF USAGELEVEL
+// WE WOULD HAVE TO CALCULATE IT AT FROTEND LEVEL FROM INFORMATION/BEHAVIOUR THEY PROVIDE
+// AND EMBED IT AND SEND TO BACKEND.
     behaviours: {
         energyConsumption: {
-            AC: { usageLevel: "high", frequency: 8 },
+            ac: { usageLevel: "high", frequency: 8 },
             fridge: { usageLevel: "moderate", frequency: 24 },
             heater: { usageLevel: "low", frequency: 2 }
         },
 
-        plastic: {
+        plasticUsage: {
             // packaging: { usageLevel: "low", frequency: 1 },
             bottles: { usageLevel: "high", frequency: 5 },
             bags: { usageLevel: "moderate", frequency: 3 },
         },
 
         transport: {
-            motorcycle: {
+            bike: {
                 usageLevel: "high",
                 trasportMode: "private",
                 travelFrequency: "workdays",
@@ -30,7 +32,7 @@ const userState = {
         },
 
         waterConsumption: {
-            shower: { usageLevel: "high", frequency: 2 }, //I don't think we should take such high personal and subjective data
+            waterWaste: { usageLevel: "high", reason: "broken pipe"}, //I don't think we should take such high personal and subjective data
             // laundry: { usageLevel: "moderate", frequency: 3 }
         }
     },
